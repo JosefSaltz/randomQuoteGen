@@ -1,16 +1,30 @@
 
 @import 'https://fonts.googleapis.com/css?family=PT+Sans';
 
-@keyframes bounceUp {
-  0% {
-    transform: translateY(0px);
+@keyframes letBounce2 {
+  0%, 50% {
+  transform:translateY(0px);
   }
-  50% {
-    transform: translateY(20px;);
+
+  25% {
+  transform:translateY(-25px);
   }
-  100% {
-    transform: translateY(0px;);
-  }
+
+
+}
+
+.animated {
+  display:inline-block;
+  animation: letBounce2 .7s infinite cubic-bezier(0,0,1,1);
+}
+  .a1 {
+  animation-delay: .10s;
+}
+  .a2 {
+  animation-delay: .15s;
+}
+  .a3 {
+  animation-delay: .20s;
 }
 
 * {
@@ -26,9 +40,9 @@
 
 #Title {
   margin-top: 150px;
-  background: #eeeeee;
+  background: radial-gradient(#FFFFFF, rgb(208, 208, 208));
   border-radius: 10px;
-  border: solid rgb(0, 128, 232);
+  border: solid  rgba(0, 141, 255, 1);
   box-shadow: 5px 5px 2px #2b2b2b;
   max-width: 400px;
   min-width: 200px;
@@ -39,7 +53,7 @@
 }
 
 #QuotePanel {
-  border: solid rgb(0, 128, 232);
+  border: solid  rgba(0, 141, 255, 1);
   min-height: 350px;
   max-height: 100%;
   min-width:300px;
@@ -48,7 +62,7 @@
   margin-top: 50px;
   padding-bottom: 35px;
   border-radius: 20px;
-  background: #eeeeee;
+  background: radial-gradient(#FFFFFF, rgb(208, 208, 208));
   box-shadow: 5px 5px 2px #2b2b2b;
 }
 

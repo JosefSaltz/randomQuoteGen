@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  var animatedDots = $('<span class="animated">. </span><span class="animated a1">. </span><span class="animated a2">. </span><span class="animated a3">. </span>');
+
   $("button").on("click", function(){
 
     $("button").fadeOut();
@@ -19,6 +22,10 @@ $(document).ready(function(){
       },
 
       dataType: "JSON",
+
+      //beforeSend: function() {
+        //$(".Quote").html(animatedDots);
+      //}
 
       success: function(response){
         $(".Quote").hide().html(response.quote).fadeIn(600);
