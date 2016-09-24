@@ -88,9 +88,12 @@ footer div {
   background-color: rgb(218, 237, 246);
 }
 
-body{
+html, body{
   background:  linear-gradient(to bottom right, rgb(18, 147, 210), rgba(0, 181, 72, 0.45));
   background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
   height:100%;
 }
 
