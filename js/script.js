@@ -8,7 +8,7 @@ $(document).ready(function(){
     $(".Quote").fadeOut();
     $(".Author").fadeOut();
     $("hr").fadeOut();
-
+    $(".twitter-share-button").fadeOut();
     $.ajax("https://andruxnet-random-famous-quotes.p.mashape.com/",{
 
       type:"POST",
@@ -30,9 +30,10 @@ $(document).ready(function(){
       success: function(response){
         $(".Quote").hide().html(response.quote).fadeIn(600);
         $(".Author").hide().html("-" + response.author).fadeIn(600);
-
         $("hr").hide().fadeIn(600);
         $("button").hide().fadeIn(600);
+        $('.twitter-share-button').remove();
+        $("#QuotePanel").append('<a href="https://twitter.com/share" class="twitter-share-button" data-text="'+response.quote+' -'+response.author+'" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>').hide().fadeIn(600);
       }
     })
 
